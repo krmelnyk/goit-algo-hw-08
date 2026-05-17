@@ -32,7 +32,11 @@ def sum_tree_values(root):
     if root is None:
         return 0
 
-    return root.value + sum_tree_values(root.left) + sum_tree_values(root.right)
+    return (
+        root.value
+        + sum_tree_values(root.left)
+        + sum_tree_values(root.right)
+    )
 
 
 if __name__ == "__main__":
