@@ -1,4 +1,6 @@
 class Node:
+    """Store a tree node value and links to child nodes."""
+
     def __init__(self, value):
         self.value = value
         self.left = None
@@ -6,10 +8,14 @@ class Node:
 
 
 class BinarySearchTree:
+    """Represent a binary search tree."""
+
     def __init__(self):
         self.root = None
 
     def insert(self, value):
+        """Insert a value while preserving the BST ordering rule."""
+
         if self.root is None:
             self.root = Node(value)
             return
@@ -29,6 +35,8 @@ class BinarySearchTree:
 
 
 def sum_tree_values(root):
+    """Return the sum of all values in a tree."""
+
     if root is None:
         return 0
 
